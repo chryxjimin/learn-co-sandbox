@@ -2,3 +2,7 @@ source "https://rubygems.org"
 
 # Specify your gem's dependencies in calories.gemspec
 
+#gem 'spoonacular', '~> 0.0.2'
+
+
+gem 'rest-client', '~> 2.1'
