@@ -1,3 +1,5 @@
+puts
+"hello world"
 
 Hi! 👋
 
