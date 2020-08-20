@@ -10,6 +10,8 @@ require "bundler/setup"
 
 # (If you use this, don't forget to add pry to your Gemfile!)
 
+API.get_recipes(3)
 
 require "irb"
 IRB.start(__FILE__)
+
