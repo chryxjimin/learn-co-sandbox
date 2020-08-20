@@ -1,0 +1,10 @@
+Calories app with Recipe - Food - Nutrition
+
+
+-ask for the user's desired calorie limit intake
+-ask for input = user calorie limit
+-return a list of recipes that will be within the user's calorie limit 
+
+- CLI class - dealing with the things showing onto the terminal
+- API class - Deals with all API things
+- Calories class - Deals with all calories for each recipe
