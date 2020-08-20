@@ -1,5 +1,6 @@
-require "pry"
-require "./lib/calories/calories"
-require './lib/calories/api'
-require './lib/calories/cli'
-require 'restclient'
+#require "pry"
+#require_relative "../lib/calories/version"
+require_relative './api'
+require_relative './cli'
+require_relative './calories_file'
+#require_relative './restclient'
