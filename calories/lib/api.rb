@@ -18,12 +18,10 @@ class API
      response = http.request(request)
      response = JSON.parse(response.body)
      
-     puts response["results"][0]["title"]
-     
       # binding.pry
       
-    response["results"].each do |car|
-      puts car["image"]
+    response["results"].each.with_index(1) do |r, index|
+      puts "#{index} - #{r["title"]}"
     end
    end
 end
