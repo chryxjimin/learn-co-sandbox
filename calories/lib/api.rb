@@ -22,7 +22,6 @@ class API
       
     response["results"].each.with_index(1) do |recipe, id|
       
-      # url = URI("https://api.spoonacular.com/recipes/716429/information?includeNutrition=false&apiKey=284f148e79944cf4b76961fd5d79ceec")
       url = URI("https://api.spoonacular.com/recipes/#{id}/information?includeNutrition=false&apiKey=284f148e79944cf4b76961fd5d79ceec")
     
     http = Net::HTTP.new(url.host, url.port)
@@ -34,7 +33,7 @@ class API
     response = http.request(request)
     recipe_information = JSON.parse(response.body)
 
-      puts "#{recipe["title"]}"
+      puts "#{recipe_information["title"]}"
       puts "#{recipe_information["sourceUrl"]}"
       
       #binding.pry
