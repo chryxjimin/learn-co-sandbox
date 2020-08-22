@@ -7,7 +7,7 @@ require "json"
 class API
 
    def self.get_recipes(maxCalories)
-      url = URI("https://api.spoonacular.com/recipes/complexSearch?apiKey=284f148e79944cf4b76961fd5d79ceec")
+      url = URI("https://api.spoonacular.com/recipes/complexSearch?apiKey=284f148e79944cf4b76961fd5d79ceec&maxCalories=#{maxCalories}")
 
      http = Net::HTTP.new(url.host, url.port)
      http.use_ssl = true
@@ -18,18 +18,17 @@ class API
      response = http.request(request)
      response = JSON.parse(response.body)
      
+     puts response["results"][0]["title"]
      
-      maxCalories = response["results"]
-     
-       binding.pry
-       maxCalories.each do |c|
-         puts c[:amount]
-        Calories.new
-       
-        #puts response.read_body
-      end
+      # binding.pry
+      
+    response["results"].each do |car|
+      puts car["image"]
+    end
    end
 end
+
+
 
 
 
