@@ -21,10 +21,7 @@ class CLI
       puts "Enter the recipe number if you want more information."
       index = gets.to_i
       if (!Recipe.all[index].nil?)
-         
-        puts Recipe.all[index].sourceurl
-      binding.pry
-       # binding.pry
+        puts Recipe.all[index - 1].sourceurl
      end
   end
 end
