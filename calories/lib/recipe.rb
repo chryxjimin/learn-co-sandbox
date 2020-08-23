@@ -1,4 +1,4 @@
-class Calories
+class Recipes
   @@all = []
   
   attr_accessor :title, :calorie_amount, :image

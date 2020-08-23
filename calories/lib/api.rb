@@ -24,7 +24,7 @@ class API
         title = recipe["title"]
         image = recipe["image"]
         calorie_amount = recipe["amount"]
-        Calories.new(title, calorie_amount, image)
+        Recipes.new(title, calorie_amount, image)
     end
   end
  end
