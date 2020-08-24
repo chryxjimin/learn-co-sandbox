@@ -17,12 +17,10 @@ class API
 
     response = http.request(request)
     response = JSON.parse(response.body)
-  
-      #binding.pry
       
     response["results"].each do |recipe, id|
       url = URI("https://api.spoonacular.com/recipes/#{recipe["id"]}/information?includeNutrition=false&apiKey=284f148e79944cf4b76961fd5d79ceec")
-    #  binding.pry
+    
       http = Net::HTTP.new(url.host, url.port)
       http.use_ssl = true
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
@@ -35,11 +33,10 @@ class API
         image = recipe["image"]
         calorie_amount = recipe["nutrition"][0]["amount"]
         Recipe.new(title, calorie_amount, image, sourceurl)
-       #binding.pry
     end
   end
  end
-# end
+
 
 
 

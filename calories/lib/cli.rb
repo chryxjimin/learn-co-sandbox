@@ -11,7 +11,6 @@ class CLI
   
    def store_recipes
       Recipe.all.each.with_index(1) do |r, i|
-      #binding.pry
           puts "#{i}. #{r.title}"
       end
    end
