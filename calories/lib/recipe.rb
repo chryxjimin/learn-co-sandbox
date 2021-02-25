@@ -15,4 +15,10 @@ class Recipe
     @@all
   end
   
+  def self.find_by_title(recipe_title)
+     self.all.find {|r| r.title  == recipe_title}
+  end
+  
+  #takes in value and finds recipe with that title
+  
 end
